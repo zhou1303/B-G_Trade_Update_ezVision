@@ -100,8 +100,8 @@ filter_not_begins_with = 'Not Begin With'
 
 # oid_enterprise = 16682284300 #Legacy
 oid_enterprise = 54775198209 #ezVision
-oid_trade_flag_report = 54800873903
-oid_subtrade_flag_report = 54800934130
+oid_trade_flag_report = None
+oid_subtrade_flag_report = None
 
 menu_value_ref_type_trade = '(19217908000,3250,0)'
 
