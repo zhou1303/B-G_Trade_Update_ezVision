@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eeeca6ce-f00f-4e20-93c0-d235db9089e6" name="Default Changelist" comment="Add by PyCharm upload">
-      <change afterPath="$PROJECT_DIR$/report_oid.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config_Post_Data.py" beforeDir="false" afterPath="$PROJECT_DIR$/Config_Post_Data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Constant.py" beforeDir="false" afterPath="$PROJECT_DIR$/Constant.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Get_Data.py" beforeDir="false" afterPath="$PROJECT_DIR$/Get_Data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Post_Data.py" beforeDir="false" afterPath="$PROJECT_DIR$/Post_Data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/password.txt" beforeDir="false" afterPath="$PROJECT_DIR$/password.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/username.txt" beforeDir="false" afterPath="$PROJECT_DIR$/username.txt" afterDir="false" />
     </list>
@@ -22,25 +21,6 @@
         <option value="Python Script" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>default</find>
-      <find>_OpenDropDownList</find>
-      <find>fill_bid_details</find>
-      <find>switch_to_url</find>
-      <find>get_new_window_number</find>
-      <find>repattern</find>
-      <find>,</find>
-      <find>print</find>
-      <find>oid_enterprise</find>
-      <find>OHMCCHEA001</find>
-      <find>_origin</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>re_pattern</replace>
-      <replace>,</replace>
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -224,6 +204,9 @@
       <workItem from="1571084269078" duration="1778000" />
       <workItem from="1571088348714" duration="269000" />
       <workItem from="1571150372421" duration="221000" />
+      <workItem from="1571152799257" duration="13000" />
+      <workItem from="1571154832149" duration="7000" />
+      <workItem from="1571155536302" duration="1701000" />
     </task>
     <task id="LOCAL-00001" summary="Add by PyCharm upload">
       <created>1571085796499</created>
@@ -256,6 +239,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Add by PyCharm upload" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/B_G_Trade_Update_ezVision$Main.coverage" NAME="Main Coverage Results" MODIFIED="1571150557187" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/B_G_Trade_Update_ezVision$Main.coverage" NAME="Main Coverage Results" MODIFIED="1571156944744" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

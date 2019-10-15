@@ -36,7 +36,6 @@ def login_tms():
 def add_ref(session_requests, csrf, obj_menu_value, ref_type_menu_value, ref_value):
     #CONFIGURE POST DATA DICT
     data_dict = Config_Post_Data.config_add_ref_by_select(csrf, obj_menu_value, ref_type_menu_value, ref_value)
-
     #SEND POST REQUEST
     response = session_requests.post(
         Constant.url_post_add_ref,

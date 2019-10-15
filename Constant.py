@@ -130,7 +130,8 @@ post_data_add_ref = {
     'ListCacheKey': '',
     'sidReferenceType1': '',
     'refType1': 'value',
-    'SR192179080001': 'AC',
+    'sSequence1': '',
+    'SR192179080001': None,
     'sContactField1': 'name'
 }
 
