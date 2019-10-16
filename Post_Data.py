@@ -1,5 +1,5 @@
 import Constant
-import requests
+from requests import session
 import Config_Post_Data
 import G_API
 import time
@@ -18,13 +18,14 @@ def login_tms():
         'inline': 'true'
     }
 
-    session_requests = requests.session()
+    session_requests = session()
 
     response = session_requests.post(
         Constant.url_tms_login,
         data=login_info,
     )
-
+    # -----------------------------------------------------------------------------------------------------------------
+    # Collect TMS login token for future operations.
     csrf = Constant.re_pattern_csrf.search(response.text).group(1)
 
     print('Login as', Constant.login_userid, '...')
@@ -34,9 +35,11 @@ def login_tms():
 
 
 def add_ref(session_requests, csrf, obj_menu_value, ref_type_menu_value, ref_value):
-    #CONFIGURE POST DATA DICT
+    # -----------------------------------------------------------------------------------------------------------------
+    # Configure POST data dictionary.
     data_dict = Config_Post_Data.config_add_ref_by_select(csrf, obj_menu_value, ref_type_menu_value, ref_value)
-    #SEND POST REQUEST
+    # -----------------------------------------------------------------------------------------------------------------
+    # Send the data dictionary to the given URL, and collect reponse.
     response = session_requests.post(
         Constant.url_post_add_ref,
         data=data_dict

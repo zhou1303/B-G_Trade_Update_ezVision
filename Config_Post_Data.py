@@ -5,7 +5,6 @@ def config_shipment_report_by_oid(csrf, oid):
     data_dict = Constant.post_data_open_report.copy()
     data_dict['_csrf'] = csrf
     data_dict['reportoid'] = oid
-
     return data_dict
 
 

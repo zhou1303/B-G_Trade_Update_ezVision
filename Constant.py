@@ -1,5 +1,5 @@
-import re
-import pandas as pd
+from re import compile
+from pandas import read_excel
 
 root_path = 'C:\\Users\\Zhou_Charles\\Desktop\\'
 file_name_bg_trade_rule_depository = 'B&G_Trade_Rule_Depository.xlsx'
@@ -25,8 +25,8 @@ url_post_request_ref_type = 'https://dsclogistics.mercurygate.net/MercuryGate/ex
 url_post_add_ref = 'https://dsclogistics.mercurygate.net/MercuryGate/common/addReference_process.jsp'
 
 
-re_pattern_csrf = re.compile('\<meta name\=\"_csrf\" content\=\"([\w\-]*)\" \/\>')
-re_pattern_url_parse = re.compile('\<script src\=\"([\w\/\.\?\=]*)\" type\=\"text\/javascript\"\>\<\/script\>')
+re_pattern_csrf = compile('\<meta name\=\"_csrf\" content\=\"([\w\-]*)\" \/\>')
+re_pattern_url_parse = compile('\<script src\=\"([\w\/\.\?\=]*)\" type\=\"text\/javascript\"\>\<\/script\>')
 
 list_col_name = [
     'menu_value',
@@ -41,7 +41,7 @@ list_col_name = [
     'actual_ship'
 ]
 
-re_pattern_all_cols = re.compile('sMenuValue\=(\(\d{11}\,\d{4}\,\d{1}\)).*?\<\/td\>\s*'
+re_pattern_all_cols = compile('sMenuValue\=(\(\d{11}\,\d{4}\,\d{1}\)).*?\<\/td\>\s*'
                                  '\<td align\=.+?\>(\d{11})\<\/td\>\s*'
                                  '\<td align\=.+?\>(.*?) \(.+?\<\/td\>\s*'
                                  '\<td align\=.+?\>(.*?)\<\/td\>\s*'
@@ -135,26 +135,26 @@ post_data_add_ref = {
     'sContactField1': 'name'
 }
 
-trade_c_origin_code_in = pd.read_excel(file_name_bg_trade_rule_depository, sheet_name='C')['ORIGIN_CODE_IN'].tolist()
-trade_f_origin_code_in = pd.read_excel(file_name_bg_trade_rule_depository, sheet_name='F')['ORIGIN_CODE_IN'].tolist()
-trade_i_origin_code_in = pd.read_excel(file_name_bg_trade_rule_depository, sheet_name='I')['ORIGIN_CODE_IN'].tolist()
-trade_n_origin_code_in = pd.read_excel(file_name_bg_trade_rule_depository, sheet_name='N')['ORIGIN_CODE_IN'].tolist()
-trade_o_origin_code_in = pd.read_excel(file_name_bg_trade_rule_depository, sheet_name='O')['ORIGIN_CODE_IN'].tolist()
-trade_t_origin_code_in = pd.read_excel(file_name_bg_trade_rule_depository, sheet_name='T')['ORIGIN_CODE_IN'].tolist()
-trade_zc_origin_code_in = pd.read_excel(file_name_bg_trade_rule_depository, sheet_name='ZC')['ORIGIN_CODE_IN'].tolist()
-trade_zf_origin_code_in = pd.read_excel(file_name_bg_trade_rule_depository, sheet_name='ZF')['ORIGIN_CODE_IN'].tolist()
-trade_zi_origin_code_in = pd.read_excel(file_name_bg_trade_rule_depository, sheet_name='ZI')['ORIGIN_CODE_IN'].tolist()
-trade_zo_origin_code_in = pd.read_excel(file_name_bg_trade_rule_depository, sheet_name='ZO')['ORIGIN_CODE_IN'].tolist()
+trade_c_origin_code_in = read_excel(file_name_bg_trade_rule_depository, sheet_name='C')['ORIGIN_CODE_IN'].tolist()
+trade_f_origin_code_in = read_excel(file_name_bg_trade_rule_depository, sheet_name='F')['ORIGIN_CODE_IN'].tolist()
+trade_i_origin_code_in = read_excel(file_name_bg_trade_rule_depository, sheet_name='I')['ORIGIN_CODE_IN'].tolist()
+trade_n_origin_code_in = read_excel(file_name_bg_trade_rule_depository, sheet_name='N')['ORIGIN_CODE_IN'].tolist()
+trade_o_origin_code_in = read_excel(file_name_bg_trade_rule_depository, sheet_name='O')['ORIGIN_CODE_IN'].tolist()
+trade_t_origin_code_in = read_excel(file_name_bg_trade_rule_depository, sheet_name='T')['ORIGIN_CODE_IN'].tolist()
+trade_zc_origin_code_in = read_excel(file_name_bg_trade_rule_depository, sheet_name='ZC')['ORIGIN_CODE_IN'].tolist()
+trade_zf_origin_code_in = read_excel(file_name_bg_trade_rule_depository, sheet_name='ZF')['ORIGIN_CODE_IN'].tolist()
+trade_zi_origin_code_in = read_excel(file_name_bg_trade_rule_depository, sheet_name='ZI')['ORIGIN_CODE_IN'].tolist()
+trade_zo_origin_code_in = read_excel(file_name_bg_trade_rule_depository, sheet_name='ZO')['ORIGIN_CODE_IN'].tolist()
 
-trade_c_dest_code_not_in = pd.read_excel(file_name_bg_trade_rule_depository, sheet_name='C')['DEST_CODE_NOT_IN'].tolist()
-trade_f_dest_code_in = pd.read_excel(file_name_bg_trade_rule_depository, sheet_name='F')['DEST_CODE_IN'].tolist()
-trade_i_dest_code_in = pd.read_excel(file_name_bg_trade_rule_depository, sheet_name='I')['DEST_CODE_IN'].tolist()
-trade_n_dest_code_in = pd.read_excel(file_name_bg_trade_rule_depository, sheet_name='N')['DEST_CODE_IN'].tolist()
-trade_o_dest_code_in = pd.read_excel(file_name_bg_trade_rule_depository, sheet_name='O')['DEST_CODE_IN'].tolist()
-trade_t_dest_code_not_in = pd.read_excel(file_name_bg_trade_rule_depository, sheet_name='T')['DEST_CODE_NOT_IN'].tolist()
-trade_zc_dest_code_not_in = pd.read_excel(file_name_bg_trade_rule_depository, sheet_name='ZC')['DEST_CODE_NOT_IN'].tolist()
-trade_zf_dest_code_in = pd.read_excel(file_name_bg_trade_rule_depository, sheet_name='ZF')['DEST_CODE_IN'].tolist()
-trade_zi_dest_code_in = pd.read_excel(file_name_bg_trade_rule_depository, sheet_name='ZI')['DEST_CODE_IN'].tolist()
-trade_zo_dest_code_in = pd.read_excel(file_name_bg_trade_rule_depository, sheet_name='ZO')['DEST_CODE_IN'].tolist()
+trade_c_dest_code_not_in = read_excel(file_name_bg_trade_rule_depository, sheet_name='C')['DEST_CODE_NOT_IN'].tolist()
+trade_f_dest_code_in = read_excel(file_name_bg_trade_rule_depository, sheet_name='F')['DEST_CODE_IN'].tolist()
+trade_i_dest_code_in = read_excel(file_name_bg_trade_rule_depository, sheet_name='I')['DEST_CODE_IN'].tolist()
+trade_n_dest_code_in = read_excel(file_name_bg_trade_rule_depository, sheet_name='N')['DEST_CODE_IN'].tolist()
+trade_o_dest_code_in = read_excel(file_name_bg_trade_rule_depository, sheet_name='O')['DEST_CODE_IN'].tolist()
+trade_t_dest_code_not_in = read_excel(file_name_bg_trade_rule_depository, sheet_name='T')['DEST_CODE_NOT_IN'].tolist()
+trade_zc_dest_code_not_in = read_excel(file_name_bg_trade_rule_depository, sheet_name='ZC')['DEST_CODE_NOT_IN'].tolist()
+trade_zf_dest_code_in = read_excel(file_name_bg_trade_rule_depository, sheet_name='ZF')['DEST_CODE_IN'].tolist()
+trade_zi_dest_code_in = read_excel(file_name_bg_trade_rule_depository, sheet_name='ZI')['DEST_CODE_IN'].tolist()
+trade_zo_dest_code_in = read_excel(file_name_bg_trade_rule_depository, sheet_name='ZO')['DEST_CODE_IN'].tolist()
 
 print('B&G trade rule depository loaded successfully.')
