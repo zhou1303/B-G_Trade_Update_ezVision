@@ -39,7 +39,7 @@ def add_ref(session_requests, csrf, obj_menu_value, ref_type_menu_value, ref_val
     # Configure POST data dictionary.
     data_dict = Config_Post_Data.config_add_ref_by_select(csrf, obj_menu_value, ref_type_menu_value, ref_value)
     # -----------------------------------------------------------------------------------------------------------------
-    # Send the data dictionary to the given URL, and collect reponse.
+    # Send the data dictionary to the given URL, and collect response.
     response = session_requests.post(
         Constant.url_post_add_ref,
         data=data_dict
